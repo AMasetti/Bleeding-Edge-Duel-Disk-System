@@ -1,10 +1,10 @@
 # Bleeding-Edge-Duel-Disk-System
 
-Field and Disk for one player
+Duel Disk System for one player. Each player would have a computer (Raspberry Pi Zero or else) running the field code and connected via serial port to the Duel Disk. The computer will project the field on the ground using a pico-projector or some display unit. Cards will apear on the field as the player commands. Life Point tracking has to be done outside the system.
 
 ### Prerequisites
 
-Dependencies instalation
+Dependencies installation
 
 ```
  pip install -r requirements.txt 
@@ -12,7 +12,21 @@ Dependencies instalation
 
 ### Installing
 
-Upload the code to the Arduino Uno and follow the connection diagram. The code can be found in Disk Code/BleedingEdgeDD/BleedingEdgeDD.ino
+Upload the code to the Arduino Uno and follow the connections bellow. 
+The code can be found in Disk Code/BleedingEdgeDD/BleedingEdgeDD.ino
+```
+--- Connection Scheme --- 
+Button 1 : Arduino Pin 10 
+Button 2 : Arduino Pin 9 
+Button 3 : Arduino Pin 8 
+Button 4 : Arduino Pin 6 
+Button 5 : Arduino Pin 7 
+Button 6 : Arduino Pin 5 
+Button 7 : Arduino Pin 4 
+NFC Reader SDA: Arduino SDA
+NFC Reader SCL: Arduino SCL
+NFC Reader IRQ: Arduino Pin 3
+```
 
 Modify line 25 of FieldCode/MainReader.py to fit the connected port of your Arduino
 ```
@@ -59,7 +73,7 @@ Setting a Face-Down:
 Long Press Button 1 this will trigger the Face Down mode. Scan the Card to be placed down, either Spell/Trap/Monster the program will determine if the card to be placed goes to a Monster or to a Spell and Trap Zone. And then select the position, note that for spell and trap cards only Zones 1,2,4,6,7 are available as in the field.
 
 Face-Down Trap Example:
-* Long Press Button 1 (Enter FAce-Down Mode)
+* Long Press Button 1 (Enter Face-Down Mode)
 * Scan the Card
 * Press Button 4 (Select the middle Spell and Trap Card Zone)
 
@@ -69,8 +83,7 @@ Example:
 * Scan the Card to be removed
 * Select the Zone of removal (in case two of the same cards are present)
 
-Special Summon:
-Example:
+Special Summon Example:
 * Long Press Button 7 to enter Special Summon Mode
 * Scan Card to Special Summon
 * Scan Cards From Hand to use as Materials
@@ -78,7 +91,6 @@ Example:
 * Scan again the Card to Special Summon
 * Select Monster Zone to be Placed with Buttons 1-7
 * Select battle psition with Buttons 3 or 5
-
 
 ## Built With
 
