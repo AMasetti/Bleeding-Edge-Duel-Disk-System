@@ -36,6 +36,12 @@ Connect the Duel Disk To the PC in the COM port modified in line 25. Run the scr
 +---+---+---+----+---+
 | 1 | 2 | 4 |  6 | 7 |
 +---+---+---+----+---+
+
+Button 1: Face-Down Mode
+Button 2: Place Pendulum Scale Mode
+Button 4: Activate Monster, Trap or Effect (Not implemented)
+Button 6: Grave/Banish Mode
+Button 7: Special Summon Mode
 ```
 Summoning:
 To summon a Monster scan the NFC card, then select the zone to be placed with buttons 1-7, then select battle position with buttons 3 and 5.
@@ -57,6 +63,21 @@ Face-Down Trap Example:
 * Scan the Card
 * Press Button 4 (Select the middle Spell and Trap Card Zone)
 
+Removing Cards From Field 
+Example:
+* Long Press Button 6 to enter Grave/Banish Mode
+* Scan the Card to be removed
+* Select the Zone of removal (in case two of the same cards are present)
+
+Special Summon:
+Example:
+* Long Press Button 7 to enter Special Summon Mode
+* Scan Card to Special Summon
+* Scan Cards From Hand to use as Materials
+* Select Monsters From Field to use as Materials
+* Scan again the Card to Special Summon
+* Select Monster Zone to be Placed with Buttons 1-7
+* Select battle psition with Buttons 3 or 5
 
 
 ## Built With
