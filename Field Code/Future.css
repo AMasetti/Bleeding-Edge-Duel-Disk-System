@@ -1,0 +1,90 @@
+.column{
+  display: inline-block;
+  width: 19.5%;
+  /*margin-top: 2%;*/
+  /*align-content: center;*/
+
+}
+
+body {
+  overflow: hidden; /* Hide scrollbars */
+}
+
+.futurepanelMonster {
+  /*box-sizing: border-box;*/
+  /*display: inline-block;*/
+  /*font: normal 100 14px/1.2em "Exo 2", Arial, sans-serif;*/
+  /*letter-spacing: .06em;*/
+  background-color: rgba(120, 200, 255, 0.1);
+  border: 1px solid rgba(120, 200, 255, 0.2);
+  color: rgba(120, 200, 255, 0.8);
+  margin-bottom: 1em;
+  /*margin-top: 2%;*/
+  /*margin-bottom: 0em;*/
+  height:30vh;
+  width: 30vh;
+  margin-left: 12.5%;
+}
+
+.ATK{
+  display: inline-block;
+  height: 100%;
+  padding-left: 15%;
+  /*z-index: 2;*/
+}
+
+.DEF{
+  display: inline-block;
+  height: 100%;
+  transform: rotate(90deg);
+  padding-left: 31%;
+  /*padding-top: 0%;*/
+  
+  /*z-index: 1;*/
+}
+
+.magic_trap{
+  display: inline-block;
+  height: 100%;
+  padding-left: 0.75%;
+}
+
+.empty{
+  display: inline-block;
+  height: 100%;
+}
+
+.futurepanelMagic {
+  box-sizing: border-box;
+  /*display: inline-block;*/
+  /*font: normal 100 14px/1.2em "Exo 2", Arial, sans-serif;*/
+  /*letter-spacing: .06em;*/
+  background-color: rgba(120, 200, 255, 0.1);
+  border: 1px solid rgba(120, 200, 255, 0.2);
+  color: rgba(120, 200, 255, 0.8);
+
+  /*margin-top: 2%;*/
+  margin-bottom: 1em;
+  height:27vh;
+  width: 19vh;
+  margin-left: 25%;
+}
+
+
+body {
+  background-color: #012;
+}
+
+.futurepanel__title {
+  box-sizing: border-box;
+  font: normal 100 10pt "Exo 2", Arial, sans-serif;
+  text-transform: uppercase;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: rgba(120, 200, 255, 0.8);
+  text-align: center;
+  margin: 0pt;
+  margin-bottom: 1em;
+}
