@@ -7,6 +7,8 @@ import CardDB as CDB
 import time
 from selenium import webdriver
 
+HTML_PATH = os.path.abspath('Field_MR5.html')
+
 # --------------------------------------------------------------------------------------------------------------------------------
 # Function Declarations
 # --------------------------------------------------------------------------------------------------------------------------------
@@ -90,7 +92,7 @@ def Process_Data(data): # Processses serial data according to action
 		pos_str+=chr(data[15])
 
 		FU.Add_Monster_Spell_Trap(Deck,cardid_str,zone_str,pos_str)
-		driver.get("file:///C:/Users/Augusto/Documents/Proyectos/Duel Disk/Bleeding Edge Duel Disk/Virtual Field/Field_MR5.html")
+		driver.get('file://' + HTML_PATH)
 
 	if action_str == "SET":
 		# Set Card
@@ -112,7 +114,7 @@ def Process_Data(data): # Processses serial data according to action
 
 		FU.Add_Set_Card(Deck,cardid_str,zone_str)
 
-		driver.get("file:///C:/Users/Augusto/Documents/Proyectos/Duel Disk/Bleeding Edge Duel Disk/Virtual Field/Field_MR5.html")
+		driver.get('file://' + HTML_PATH)
 
 	if action_str == "PEN":
 		# Pendulum Place
@@ -134,7 +136,7 @@ def Process_Data(data): # Processses serial data according to action
 
 		FU.Add_Pendulum(Deck,cardid_str,zone_str)
 
-		driver.get("file:///C:/Users/Augusto/Documents/Proyectos/Duel Disk/Bleeding Edge Duel Disk/Virtual Field/Field_MR5.html")
+		driver.get('file://' + HTML_PATH)
 
 	if action_str == "GRA":
 		# Send Monster to Graveyard
@@ -156,7 +158,7 @@ def Process_Data(data): # Processses serial data according to action
 
 		FU.Remove_Card(Deck,cardid_str,zone_str)
 
-		driver.get("file:///C:/Users/Augusto/Documents/Proyectos/Duel Disk/Bleeding Edge Duel Disk/Virtual Field/Field_MR5.html")
+		driver.get('file://' + HTML_PATH)
 
 	if action_str == "SPS":
 		# Special Summon a Monster
@@ -180,15 +182,15 @@ def Process_Data(data): # Processses serial data according to action
 		zone_str+=chr(length)
 
 		FU.Add_Monster(Deck,ss_monster,zone_str,"ATK")
-		driver.get("file:///C:/Users/Augusto/Documents/Proyectos/Duel Disk/Bleeding Edge Duel Disk/Virtual Field/Field_MR5.html")
+		driver.get('file://' + HTML_PATH)
 
 # --------------------------------------------------------------------------------------------------------------------------------
 # Code Start
 # --------------------------------------------------------------------------------------------------------------------------------
 
-driver = webdriver.Chrome(r'C:\Users\Augusto\Documents\Unmovable\chromedriver.exe')
+driver = webdriver.Chrome()
 driver.fullscreen_window()
-driver.get("file:///C:/Users/Augusto/Documents/Proyectos/Duel Disk/Bleeding Edge Duel Disk/Virtual Field/Field_MR5.html")
+driver.get('file://' + HTML_PATH)
 
 Clean_Field()
 
